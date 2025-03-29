@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-titulo: #738059; 
+    --cor-destaque: #be1e2d;
+    --cor-secundaria: #ffe57c;
+    --cor-texto: #424b2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image:url(/assets/1-cortada.jpg);
+    background-size: contain; 
+    background-repeat: repeat;
+    position: relative;
+    font-family: Inter, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7); 
+    z-index: -1; 
+}
+
+.titulo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--cor-titulo);
+    padding: 10px 10px 10px 0; 
+    text-align: center;
+    padding-left: 50px;
+
+
+}
+
+.titulo span {
+    background-color: var(--cor-secundaria);
+    padding: 5px;
+    margin: 3px;
+    display: inline-block;
+
+}
+
+
+.titulo__menor {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-titulo);
+    padding: 15px 15px 15px 0;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.titulo__texto {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 15px;
+    padding-left: 50px;
+    color: var(--cor-texto);
+    text-align: justify;
+}
+
+.titulo__texto__destaque{
+    color: var(--cor-destaque);
+}
+
+.titulo__texto__sanfona {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 15px;
+    color: var(--cor-texto);
+    text-align: justify;
+}
+
+/* SANFONA */
+
+.titulo__sanfona {
+    font-size: 1.5rem;
+}
+
+.titulo__menor__sanfona {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--cor-titulo);
+    padding: 15px;
+    text-align: center;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 320px;
+    margin: auto auto;
+    padding: 10px 10px 10px 0px;
+    padding-left: 40px;
+
+}
+.accordion-item {
+    border: 5px solid var(--cor-destaque);
+    border-radius: 30px;
+    margin-bottom: 10px;
+
+}
+.accordion input {
+    display: none;
+}
+.accordion label {
+    background: #fff; 
+    color: var(--cor-destaque); 
+    padding: 15px; 
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion label:hover {
+    background: var(--cor-secundaria); 
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background: #fff;
+    max-height: 150px; 
+    overflow-y: auto; 
+    border-radius: 0 0 30px 30px; 
+}
+
+.accordion input:checked ~ .accordion-content {
+    display: block;
+}
+
+/* BAIXAR-PDF */
+
+.baixar-pdf {
+    display: flex;
+}
+
+.titulo__baixar__pdf {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--cor-texto);
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo__baixar {
+    color: var(--cor-destaque);
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* INTEGRANTES */
+
+.integrantes {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-texto);
+    padding: 20px;
+    justify-content: center !important;
+    align-items: center !important;  
+}
+
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #fff;
+}
+
+.perfil-container:last-child {
+    border: none;
+}
+
+.titulo__integrantes {
+    display: flex;
+    background-color: var(--cor-texto);
+    justify-content: center;
+}
+
+.titulo__int {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.perfil {
+    width: 40%;
+    height: 40%; 
+    align-items: center;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin: auto auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+
+
+.nome {
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.emails {
+    color: var(--cor-destaque);
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* TEXTO DO FINAL */
+.titulo__int__final {
+    display: flex;
+    background-color: var(--cor-texto);
+    justify-content: center;
+    padding: 0 10px 20px 10px;
+}
+
+.titulo__int__texto {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+/* Media Query para tablets (600px a 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        width: 100%;
+        background-size: contain; 
+        background-repeat: repeat-y;
+    }
+
+    .titulo{
+        font-size: 3rem;
+        padding-left: 100px;
+    }
+
+    .titulo__menor {
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding-left: 100px;
+
+    }
+
+    .titulo__texto {
+        font-size: 2rem;
+        padding: 20px 20px 20px 0;
+        padding-left: 100px;
+    }
+
+    /* SANFONA */
+    .titulo__sanfona {
+        font-size: 2.5rem;
+    }
+
+    .titulo__menor__sanfona {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--cor-titulo);
+        padding: 15px;
+        text-align: center;
+    }
+
+    .titulo__texto__sanfona {
+        font-size: 1.5rem;
+    }
+
+    .accordion {
+        width: 100% !important; 
+        max-width: 550px;
+        margin: auto auto;
+        padding: 20px;
+    }
+
+    .perfil {
+        width: 30%;
+        height: 30%;     
+    }
+    
+    
+    .nome {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    
+    .emails {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    
+    /* TEXTO DO FINAL */
+
+    .titulo__int__texto {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    
+}
+
+
+/* Media Query para desktops (a partir de 1025px) */
+@media (min-width: 1025px) {
+    body {
+        background-size: contain;
+    }
+
+    .titulo {
+        font-size: 4rem;
+        padding-left: 220px;
+    }
+
+    .titulo__menor {
+        font-size: 3rem;
+        font-weight: 700;
+        padding-left: 220px;
+
+    }
+
+    .titulo__texto {
+        font-size: 2.5rem;
+        padding: 10px 50px 10px 50px;
+        font-weight: 500;
+        padding-left: 220px;
+    }
+
+    /* SANFONA */
+
+    .titulo__sanfona {
+        font-size: 3rem;
+    }
+
+    .titulo__menor__sanfona {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .titulo__texto__sanfona {
+        font-size: 2rem;
+    }
+
+    .accordion {
+        width: 100%; 
+        max-width: 1300px;
+        margin: auto auto;
+        padding: 50px;
+    }
+
+    /* BAIXAR-PDF */
+
+    .titulo__baixar__pdf {
+        font-size: 3rem;
+        font-weight: 500;
+        padding: 50px;
+        text-align: center;
+        margin: auto auto;
+    }
+
+    .titulo__baixar {
+        font-size: 3.2rem;
+        font-weight: 600;
+    }
+
+    /* Integrantes */
+
+    .integrantes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(2, auto); 
+        gap: 30px;
+    }
+
+    .perfil-container {
+        border: none;
+    }
+
+    .titulo__integrantes {
+        display: flex;
+        background-color: var(--cor-texto);
+        justify-content: center;
+    }
+
+    .titulo__int {
+        font-size: 3rem;
+        font-weight: 600;
+        padding: 20px;
+    }
+
+    .perfil {
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        height: 30%;
+    }
+
+    .nome {
+        font-size: 2rem;
+        font-weight: 600;
+
+        }
+
+    .emails {
+        font-size: 1.5rem;
+        font-weight: 500;
+        border: none; 
+    }
+
+
+    .titulo__int__texto {
+        font-size: 3rem;
+        font-weight: 500;
+        padding: 20px;
+    }
+
+}
