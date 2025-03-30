@@ -20,6 +20,8 @@ body {
     background-repeat: repeat;
     position: relative;
     font-family: Inter, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body::before {
@@ -194,6 +196,10 @@ body::before {
     border-bottom: 2px solid #fff;
 }
 
+.perfil__professores:last-child {
+    border: none;
+}
+
 
 /* INTEGRANTES */
 
@@ -232,6 +238,8 @@ body::before {
     color: #fff;
     padding: 15px;
     text-align: center;
+    width: 100%;
+    border-top: 10px solid var(--cor-destaque);
 }
 
 .perfil {
@@ -336,7 +344,8 @@ body::before {
         width: 100% !important; 
         max-width: 550px;
         margin: auto auto;
-        padding: 20px;
+        padding: 20px 20px 20px 0;
+        padding-left: 100px;
     }
 
     .perfil {
@@ -355,6 +364,16 @@ body::before {
         font-weight: 500;
     }
 
+    /* INTEGRANTES */
+
+    .perfil-container:last-child {
+        border: none;
+    }
+
+    .perfil__professores {
+        border: none;
+    }
+
     
     /* TEXTO DO FINAL */
 
@@ -370,6 +389,7 @@ body::before {
 @media (min-width: 1025px) {
     body {
         background-size: contain;
+
     }
 
     .titulo {
@@ -438,8 +458,8 @@ body::before {
     .professores {
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
-        grid-template-rows: repeat(1, auto); 
         gap: 30px; 
+        justify-content: center;
     }
     
     .perfil__professores {
@@ -452,7 +472,9 @@ body::before {
         display: grid;
         grid-template-columns: repeat(4, 1fr); 
         grid-template-rows: repeat(2, auto); 
-        gap: 30px;
+        padding: 20px;
+        gap: 20px;
+        justify-content: center;
     }
 
     .perfil-container {
@@ -468,7 +490,8 @@ body::before {
     .titulo__int {
         font-size: 3rem;
         font-weight: 600;
-        padding: 20px;
+        padding: 20px 0 0 0;
+        border-top: 10px dashed var(--cor-destaque);
     }
 
     .perfil {
@@ -485,11 +508,16 @@ body::before {
         }
 
     .emails {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 500;
         border: none; 
     }
 
+    .titulo__int__final {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
 
     .titulo__int__texto {
         font-size: 3rem;
