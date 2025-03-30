@@ -101,12 +101,16 @@ body::before {
 
 .emails__sanfona {
     color: var(--cor-destaque);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 500;
     padding-bottom: 20px;
     text-align: center;
     width: 100%;
     text-decoration: none;
+}
+
+.link {
+    color:var(--cor-destaque);
 }
 
 .accordion {
@@ -159,21 +163,39 @@ body::before {
 
 .baixar-pdf {
     display: flex;
+    padding-left: 50px;
 }
 
 .titulo__baixar__pdf {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--cor-texto);
     text-align: center;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 20px 0;
 }
 
 .titulo__baixar {
     color: var(--cor-destaque);
     font-size: 2rem;
     font-weight: 600;
-    text-decoration: none;
+}
+
+/* TITULO-DOCENTES */
+
+.titulo__professores {
+    display: flex;
+    background-color: var(--cor-secundaria);
+    justify-content: center;
+}
+
+.titulo__prof{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    text-align: center;
+    padding: 15px 15px 0 15px;
+    width: 100%;
+    border-top: 10px solid var(--cor-destaque);
 }
 
 /* PROFESSORES */
@@ -181,7 +203,7 @@ body::before {
 .professores {
     display: flex;
     flex-direction: column;
-    background-color: var(--cor-texto);
+    background-color: var(--cor-secundaria);
     padding: 20px;
     justify-content: center !important;
     align-items: center !important;  
@@ -193,11 +215,27 @@ body::before {
     align-items: center;
     text-align: center;
     width: 100%;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid var(--cor-destaque);
+    padding: 20px;
+    
 }
 
 .perfil__professores:last-child {
     border: none;
+}
+
+
+.nome__professores {
+    color: var(--cor-destaque);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.descricao__professores {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--cor-texto);
 }
 
 
@@ -230,7 +268,6 @@ body::before {
 .perfil-container:last-child {
     border: none;
 }
-
 
 
 .titulo__integrantes {
@@ -278,7 +315,7 @@ body::before {
 
 .emails {
     color: var(--cor-destaque);
-    font-size: 1.5rem;
+    font-size: 1.2em;
     font-weight: 500;
     text-align: center;
     width: 100%;
@@ -355,12 +392,38 @@ body::before {
         padding-left: 100px;
     }
 
+    .emails__sanfona {
+        font-size: 1.5rem;
+    }
+
+    /* BAIXAR-PDF */
+    .baixar-pdf {
+        padding-left: 100px;
+    }
+    
+    .titulo__baixar__pdf {
+        font-size: 2em;
+    }
+    
+    .titulo__baixar {
+        font-size: 2.2rem;
+    }
+
+    /* TITULO-PROFESSORES */
+
+    .titulo__prof{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+
+    /* INTEGRANTES */
+
     .perfil {
         width: 30%;
         height: 30%;     
     }
-    
-    
+
     .nome {
         font-size: 2rem;
         font-weight: 600;
@@ -370,8 +433,6 @@ body::before {
         font-size: 1.5rem;
         font-weight: 500;
     }
-
-    /* INTEGRANTES */
 
     .perfil-container:last-child {
         border: none;
@@ -450,7 +511,7 @@ body::before {
     .titulo__baixar__pdf {
         font-size: 3rem;
         font-weight: 500;
-        padding: 50px;
+        padding: 0 50px 50px 220px;
         text-align: center;
         margin: auto auto;
     }
@@ -458,6 +519,13 @@ body::before {
     .titulo__baixar {
         font-size: 3.2rem;
         font-weight: 600;
+    }
+
+    /* TITULO-DOCENTES */
+
+    .titulo__prof{
+        font-size: 3rem;
+        font-weight: 700;
     }
 
     /* PROFESSORES */
@@ -473,13 +541,22 @@ body::before {
         border: none;
     }
 
+    .nome__professores {
+        font-size: 1.8rem;
+    }
+
+    .descricao__professores {
+        text-align: justify;
+        padding: 25px;
+    }
+
     /* INTEGRANTES */
 
     .integrantes {
         display: grid;
         grid-template-columns: repeat(4, 1fr); 
         grid-template-rows: repeat(2, auto); 
-        padding: 20px;
+        padding: 30px;
         gap: 20px;
         justify-content: center;
     }
@@ -509,13 +586,13 @@ body::before {
     }
 
     .nome {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         font-weight: 600;
 
         }
 
     .emails {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 500;
         border: none; 
     }
