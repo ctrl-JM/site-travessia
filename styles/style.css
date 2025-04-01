@@ -195,7 +195,7 @@ body::before {
     text-align: center;
     padding: 15px 15px 0 15px;
     width: 100%;
-    border-top: 10px solid var(--cor-destaque);
+    border-top: 10px dashed var(--cor-destaque);
 }
 
 /* PROFESSORES */
@@ -206,7 +206,7 @@ body::before {
     background-color: var(--cor-secundaria);
     padding: 20px;
     justify-content: center !important;
-    align-items: center !important;  
+    align-items: center !important; 
 }
 
 .perfil__professores {
@@ -239,6 +239,26 @@ body::before {
 }
 
 
+/* TITULO-INTEGRANTES */
+
+.titulo__integrantes {
+    display: flex;
+    background-color: var(--cor-texto);
+    justify-content: center;
+    
+}
+
+.titulo__int {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    border-top: 10px dashed var(--cor-destaque);
+}
+
+
 /* INTEGRANTES */
 
 .integrantes {
@@ -267,23 +287,6 @@ body::before {
 
 .perfil-container:last-child {
     border: none;
-}
-
-
-.titulo__integrantes {
-    display: flex;
-    background-color: var(--cor-texto);
-    justify-content: center;
-}
-
-.titulo__int {
-    font-size: 2rem;
-    font-weight: 500;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-    width: 100%;
-    border-top: 10px solid var(--cor-destaque);
 }
 
 .perfil {
@@ -526,6 +529,7 @@ body::before {
     .titulo__prof{
         font-size: 3rem;
         font-weight: 700;
+        border-top: 10px dashed var(--cor-destaque);
     }
 
     /* PROFESSORES */
