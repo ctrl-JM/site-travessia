@@ -35,6 +35,118 @@ body::before {
     z-index: -1; 
 }
 
+/* MENU */
+
+.menu {
+  background-color: #424b2e;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__imagem {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.menu__botao {
+  background: none;
+  border: none;
+  color: var(--cor-secundaria);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  padding: 0;
+}
+
+.menu__icone {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--cor-secundaria);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  top: -1px; 
+}
+
+.menu__icone::before,
+.menu__icone::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background-color: var(--cor-secundaria);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.menu__icone::before {
+  top: -8px; /* melhor alinhamento que -10px */
+}
+
+.menu__icone::after {
+  top: 8px;
+}
+
+.menu__icone.aberto {
+  background-color: transparent;
+}
+
+.menu__icone.aberto::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu__icone.aberto::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+
+.menu__links.ativo {
+  max-height: 300px; /* Ajuste se necessário */
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 10px;
+
+}
+
+.menu__links a {
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--cor-secundaria);
+  padding: 10px 0;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid var(--cor-secundaria);
+}
+
+.menu__links a:hover {
+  color: var(--cor-destaque);
+}
+
+/* TÍTULO */
+
 .titulo {
     font-size: 2rem;
     font-weight: 800;
@@ -480,6 +592,46 @@ body::before {
         font-weight: 500;
         padding-left: 220px;
     }
+
+    /* MENU */
+
+  .menu {
+    flex-direction: row; /* alinhamento horizontal */
+    align-items: center;
+  }
+
+  .menu__imagem {
+  height: 100px;
+  width: auto;
+}
+  
+  .menu__topo {
+    flex: 0 0 auto;
+  }
+  
+  /* Sem botão*/
+  .menu__botao {
+    display: none;
+  }
+  
+  /* Menu links ficam visíveis em linha, lado do topo */
+  .menu__links {
+    max-height: none;
+    overflow: visible;
+    margin-top: 0;
+    margin-left: 40px;
+    flex-direction: row;
+    display: flex !important; /* força exibição */
+  }
+  
+  /* Links sem borda e com espaçamento lateral */
+  .menu__links a {
+    border: none !important;
+    padding: 0;
+    margin-left: 30px;
+  }
+  
+
 
     /* SANFONA */
 
