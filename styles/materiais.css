@@ -15,21 +15,17 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image:url(/assets/1-cortada.jpg);
-    background-size: cover;
-    background-repeat: repeat;
-    position: relative;
     font-family: Inter, sans-serif;
-    overflow-x: hidden;
     width: 100%;
 }
 
 .fundo-translucido {
   position: relative;
   min-height: 100vh;
+  width: 100%;
   background-image: url(/assets/1-cortada.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: contain;
+  background-repeat: repeat;
   background-position: center;
   overflow-x: hidden;
 }
@@ -42,7 +38,6 @@ body {
   z-index: 1;
 }
 
-/* todo o conteúdo dentro dessa div fica acima da camada branca */
 .fundo-translucido > * {
   position: relative;
   z-index: 2;
@@ -207,7 +202,7 @@ body {
 }
 
 .card {
-  background-color: #be1e2d;
+  background-color:#981824;
   border-radius: 10px;
   padding: 15px;
   text-align: center;
@@ -252,10 +247,10 @@ body {
 
 /* Media Query para tablets (600px a 1024px) */
 @media (min-width: 600px) and (max-width: 1024px) {
-    body {
-        width: 100%;
-        background-size: contain; 
-        background-repeat: repeat-y;
+
+    .fundo-translucido {
+      background-size: cover; 
+      background-repeat: repeat-y;
     }
 
     .titulo{
@@ -278,9 +273,9 @@ body {
 
 /* Media Query para desktops (a partir de 1025px) */
 @media (min-width: 1025px) {
-    body {
-        background-size: contain !important;
 
+    .fundo-translucido {
+      background-size: cover;
     }
 
     .titulo {
