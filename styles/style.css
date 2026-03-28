@@ -262,7 +262,7 @@ body::before {
     display: none;
     padding: 10px;
     background: #fff;
-    max-height: 150px; 
+    max-height: 250px; 
     overflow-y: auto; 
     border-radius: 0 0 30px 30px; 
 }
@@ -691,6 +691,11 @@ body::before {
         margin: auto auto;
         padding: 50px 50px 50px 0;
         padding-left: 220px;
+    }
+
+    .accordion-content {
+    max-height: 450px; 
+   
     }
 
     /* BAIXAR-PDF */
