@@ -154,8 +154,6 @@ body::before {
     padding: 10px 10px 10px 0; 
     text-align: center;
     padding-left: 50px;
-
-
 }
 
 .titulo span {
@@ -219,6 +217,8 @@ body::before {
     text-align: center;
     width: 100%;
     text-decoration: none;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .link {
@@ -227,10 +227,11 @@ body::before {
 
 .accordion {
     width: 100%;
-    max-width: 320px;
+    max-width: 400px;
     margin: auto auto;
     padding: 10px 10px 10px 0px;
     padding-left: 40px;
+    box-sizing: border-box;
 
 }
 .accordion-item {
@@ -319,16 +320,16 @@ body::before {
     padding: 20px;
     justify-content: center !important;
     align-items: center !important; 
+    box-sizing: border-box;
 }
 
 .perfil__professores {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     width: 100%;
     border-bottom: 2px solid var(--cor-destaque);
-    padding: 20px;
+    padding: 15px;
     
 }
 
@@ -348,6 +349,8 @@ body::before {
     font-size: 1rem;
     font-weight: 400;
     color: var(--cor-texto);
+    text-align: justify;
+    padding: 15px;
 }
 
 
@@ -380,6 +383,7 @@ body::before {
     padding: 20px;
     justify-content: center !important;
     align-items: center !important;  
+    box-sizing: border-box;
 }
 
 .perfil-container {
@@ -390,6 +394,7 @@ body::before {
     width: 100%;
     padding: 20px;
     border-bottom: 2px solid #fff;
+    box-sizing: border-box;
 }
 
 .perfil-container:first-child {
@@ -435,10 +440,20 @@ body::before {
     text-align: center;
     width: 100%;
     text-decoration: none;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 
 /* TEXTO DO FINAL */
+
+.rodape {
+    display: flex;
+    width: 100%;
+    text-align: center;
+
+}
+
 .titulo__int__final {
     display: flex;
     background-color: var(--cor-texto);
@@ -456,7 +471,7 @@ body::before {
 
 /* Formulario */
 
-.botao-formulario {
+/* .botao-formulario {
     display: block;
     background-color: white;
     color: var(--cor-texto);
@@ -475,7 +490,7 @@ body::before {
 
 .botao-formulario:hover {
     background-color: #ccc;
-}
+} */
 
 
 /* Media Query para tablets (600px a 1024px) */
@@ -746,20 +761,37 @@ body::before {
     /* INTEGRANTES */
 
     .integrantes {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
         padding: 30px;
         gap: 20px;
         justify-content: center;
+        align-items: start;
     }
 
     .perfil-container {
         border: none;
+        grid-column: span 2;
     }
 
-    .perfil-container:last-child {
-        grid-column: 2 / 4; 
-        justify-self: center;
+    .perfil-container:nth-child(1) {
+        grid-column: 1 / span 2;
+    }
+
+    .perfil-container:nth-child(2) {
+        grid-column: 3 / span 2;
+    }
+
+    .perfil-container:nth-child(3) {
+        grid-column: 5 / span 2;
+    }
+
+    .perfil-container:nth-child(4) {
+        grid-column: 2 / span 2;
+    }
+
+    .perfil-container:nth-child(5) {
+        grid-column: 4 / span 2;
     }
 
     .titulo__integrantes {
@@ -796,16 +828,15 @@ body::before {
         border: none; 
     }
 
-    .titulo__int__final {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-    }
 
     .titulo__int__texto {
         font-size: 3rem;
         font-weight: 500;
         padding: 0 20px 20px 20px;
+    }
+
+    .titulo__int__final {
+        width: 100%;
     }
     
     .botao-formulario {
