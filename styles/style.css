@@ -762,7 +762,7 @@ body::before {
 
     .integrantes {
         display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         padding: 30px;
         gap: 20px;
         justify-content: center;
