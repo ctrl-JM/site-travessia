@@ -761,12 +761,20 @@ body::before {
     /* INTEGRANTES */
 
     .integrantes {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        padding: 30px;
-        gap: 20px;
-        justify-content: center;
-        align-items: start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px;
+    gap: 20px;
+    justify-items: center; /* centraliza horizontalmente */
+    }
+
+    .perfil-container {
+        width: 100%;
+        max-width: 250px; /* opcional, pra não esticar demais */
+    }
+
+    .perfil-container:nth-child(7) {
+    grid-column: 2;
     }
 
     .titulo__integrantes {
