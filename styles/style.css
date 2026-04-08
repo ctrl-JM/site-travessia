@@ -650,7 +650,7 @@ body::before {
 
   .menu__imagem {
   height: 100px;
-  width: auto;
+  width: auto; 
 }
   
   .menu__topo {
@@ -770,7 +770,6 @@ body::before {
 
     .perfil-container {
         width: 100%;
-        max-width: 250px; /* opcional, pra não esticar demais */
     }
 
     .perfil-container:nth-child(7) {
