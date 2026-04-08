@@ -770,6 +770,7 @@ body::before {
 
     .perfil-container {
         width: 100%;
+        border: none;
     }
 
     .perfil-container:nth-child(7) {
