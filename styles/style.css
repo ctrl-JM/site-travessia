@@ -763,8 +763,8 @@ body::before {
     .integrantes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 30px;
-    gap: 20px;
+    padding: 15px;
+    gap: 5px;
     justify-items: center; /* centraliza horizontalmente */
     }
 
